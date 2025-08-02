@@ -1,0 +1,122 @@
+---
+description: This rule provides comprehensive best practices and coding standards for Nuxt 4 projects, covering code organization, performance, security, testing, and common pitfalls. It aims to ensure maintainable, scalable, and secure Nuxt 4 applications.
+globs: *.vue,*.js,*.ts,*.mjs,*.mts,*.jsx,*.tsx,*.config.js,*.config.ts
+---
+
+# Nuxt 4 Development Standards
+
+## Core Principles
+
+- **Enable ESLint support:** Use the `@nuxt/eslint` module for project-aware ESLint configuration
+- **Adopt Nuxt.js Modules:** Leverage Nuxt.js modules to encapsulate functionalities and maintain a clean codebase
+- **Convention over Configuration:** Adhere to Nuxt.js conventions to simplify development and collaboration
+- **Efficiently Utilize Nuxt Layouts:** Create reusable layouts for components shared across multiple pages
+- **Manage State with Pinia:** Use Pinia for state management with feature-based organization
+- **Divide Pages into Components:** Break down pages into small, reusable components
+- **Leverage Nuxt Plugins Wisely:** Use Nuxt plugins for global functionality with performance awareness
+- **Optimize for SEO and Performance:** Utilize SSR for SEO and implement lazy loading strategies
+- **Implement Error Handling and Validation:** Robust error handling and validation mechanisms
+- **Document Your Code:** Clear documentation using JSDoc standards
+- **Embrace Testing:** Comprehensive testing with Jest, Vue Test Utils, and Vitest
+
+## Directory Structure Standards
+
+- `app/`: Main application directory (Nuxt 4 convention)
+- `app/components/`: Reusable Vue components
+- `app/composables/`: Reusable composable functions
+- `app/layouts/`: Application layouts
+- `app/middleware/`: Route middleware
+- `app/pages/`: Application pages (route definitions)
+- `app/plugins/`: Nuxt.js plugins
+- `server/`: API routes and server-side logic
+- `public/`: Static assets (images, fonts, etc.)
+- `types/`: TypeScript type definitions
+- `shared/`: Shared utilities and constants
+- `content/`: Content files for Nuxt Content
+- `i18n/`: Internationalization files
+
+## File Naming Conventions
+
+- **Components:** `PascalCase.vue` (e.g., `MyComponent.vue`)
+- **Composables:** `usePascalCase.ts` (e.g., `useCounter.ts`)
+- **Layouts:** `kebab-case.vue` (e.g., `default.vue`, `custom-layout.vue`)
+- **Pages:** `kebab-case.vue` (e.g., `index.vue`, `about.vue`, `product-details.vue`)
+- **Plugins:** `kebab-case.ts` (e.g., `analytics.ts`)
+- **Stores:** `kebab-case.ts` (e.g., `user-store.ts`)
+- **Utility functions:** `camelCase.ts` (e.g., `formatDate.ts`)
+
+## Component Architecture
+
+- Favor Composition API over Options API
+- Use functional components for simple UI elements
+- Design components for reusability and testability
+- Implement proper prop validation and emit handling
+- Use slots for flexible component composition
+- Keep components focused on single responsibility
+
+## State Management with Pinia
+
+- Organize stores by features or functionalities
+- Maintain single source of truth for application state
+- Treat state as immutable using proper update functions
+- Use descriptive names for store modules, actions, and mutations
+- Implement proper TypeScript typing for stores
+
+## Performance Optimization
+
+- Implement lazy loading for images, components, and routes
+- Use code splitting with dynamic imports
+- Optimize bundle size with tree shaking
+- Cache API responses and static assets
+- Use `nuxt/image` for image optimization
+- Implement virtualization for large lists
+- Use computed properties effectively to avoid unnecessary re-renders
+- Apply debouncing and throttling for event handlers
+
+## Security Best Practices
+
+- Prevent XSS attacks with proper input sanitization
+- Implement CSRF protection with tokens
+- Use ORM to prevent SQL injection
+- Implement secure authentication and authorization
+- Validate user input on both client and server side
+- Use HTTPS for all API communication
+- Implement API rate limiting
+- Encrypt sensitive data at rest and in transit
+
+## Testing Strategy
+
+- **Unit Testing:** Test individual components in isolation
+- **Integration Testing:** Test component interactions and data flow
+- **End-to-End Testing:** Simulate user interactions with Cypress or Playwright
+- **Test Organization:** Group tests by feature with descriptive names
+- **Mocking:** Use mock objects and stubs for external dependencies
+
+## Error Handling
+
+- Implement centralized error handling
+- Use error boundaries to isolate component failures
+- Provide user-friendly error messages
+- Handle asynchronous operations properly
+- Implement proper logging for debugging
+
+## Code Quality
+
+- Use TypeScript for better type safety
+- Follow ESLint and Prettier configurations
+- Implement proper JSDoc documentation
+- Use meaningful variable and function names
+- Keep functions small and focused
+- Avoid code duplication through proper abstraction
+
+## Development Workflow
+
+- Use Git hooks with Husky for pre-commit linting
+- Implement continuous integration with automated testing
+- Use semantic versioning for releases
+- Maintain comprehensive documentation
+- Regular dependency updates and security audits
+description:
+globs:
+alwaysApply: false
+---

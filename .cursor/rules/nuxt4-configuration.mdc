@@ -1,0 +1,159 @@
+---
+description: This rule provides guidelines for Nuxt 4 configuration, covering nuxt.config.ts, module configuration, build settings, and environment-specific configurations.
+globs: nuxt.config.ts,nuxt.config.js,*.config.ts,*.config.js
+---
+
+
+# Nuxt 4 Configuration Standards
+
+## Configuration File Structure
+
+- Use `nuxt.config.ts` as the primary configuration file
+- Implement TypeScript for better type safety and IntelliSense
+- Use environment-specific configuration files when needed
+- Organize configuration sections logically
+- Use proper TypeScript interfaces for configuration types
+
+## Core Configuration
+
+- Set appropriate `app.baseURL` for deployment environments
+- Configure `app.head` for proper meta tags and SEO
+- Use `app.layoutTransition` and `app.pageTransition` for smooth navigation
+- Implement proper `app.keepalive` configuration
+- Set appropriate `app.mountId` for mounting point
+
+## Module Configuration
+
+- Use official Nuxt modules when available
+- Configure modules with proper TypeScript types
+- Implement module-specific environment variables
+- Use module composition for complex configurations
+- Document custom module configurations
+
+## Build Configuration
+
+- Configure `vite` options for optimal build performance
+- Set appropriate `webpack` options when needed
+- Implement proper code splitting strategies
+- Configure asset optimization settings
+- Use build-time environment variables
+
+## Development Configuration
+
+- Set up proper development server configuration
+- Configure hot module replacement (HMR)
+- Implement development-specific environment variables
+- Use proper debugging configuration
+- Configure development tools and extensions
+
+## Production Configuration
+
+- Implement production-specific optimizations
+- Configure proper caching strategies
+- Set up CDN configuration for static assets
+- Implement proper error handling and monitoring
+- Configure performance monitoring tools
+
+## Environment Variables
+
+- Use `.env` files for environment-specific configuration
+- Implement proper environment variable validation
+- Use runtime configuration for client-side variables
+- Implement secure handling of sensitive configuration
+- Use proper naming conventions for environment variables
+
+## TypeScript Configuration
+
+- Configure `tsconfig.json` for optimal TypeScript support
+- Set up proper type checking and linting
+- Implement strict TypeScript configuration
+- Configure proper module resolution
+- Use TypeScript for all configuration files
+
+## CSS and Styling Configuration
+
+- Configure CSS preprocessors (Sass, Less, Stylus)
+- Set up CSS modules and scoped styling
+- Configure PostCSS plugins and optimizations
+- Implement proper CSS extraction and optimization
+- Configure responsive design utilities
+
+## Image and Asset Configuration
+
+- Configure `@nuxt/image` for image optimization
+- Set up proper asset handling and optimization
+- Configure static asset serving
+- Implement proper image formats and compression
+- Use CDN configuration for asset delivery
+
+## SEO and Meta Configuration
+
+- Configure proper meta tags and Open Graph
+- Implement structured data (JSON-LD)
+- Configure sitemap generation
+- Set up proper robots.txt configuration
+- Implement canonical URLs and redirects
+
+## Internationalization Configuration
+
+- Configure `@nuxtjs/i18n` for multi-language support
+- Set up proper locale detection and routing
+- Configure translation file management
+- Implement proper date and number formatting
+- Set up RTL language support
+
+## Authentication Configuration
+
+- Configure authentication modules and strategies
+- Set up proper session management
+- Configure OAuth providers and social login
+- Implement proper security headers
+- Configure CSRF protection
+
+## Database Configuration
+
+- Configure database connections and pooling
+- Set up ORM/ODM configuration
+- Implement proper migration configuration
+- Configure database backup and recovery
+- Set up proper database monitoring
+
+## Caching Configuration
+
+- Configure Redis or other caching solutions
+- Set up proper cache invalidation strategies
+- Configure CDN settings for static assets
+- Implement proper cache headers
+- Configure distributed caching for scalability
+
+## Monitoring and Analytics
+
+- Configure error tracking and monitoring
+- Set up performance monitoring tools
+- Configure analytics and user tracking
+- Implement proper logging configuration
+- Set up health check endpoints
+
+## Security Configuration
+
+- Configure security headers and CSP
+- Set up proper CORS configuration
+- Implement rate limiting and DDoS protection
+- Configure SSL/TLS settings
+- Set up proper authentication and authorization
+
+## Testing Configuration
+
+- Configure testing frameworks and tools
+- Set up proper test environment configuration
+- Configure code coverage reporting
+- Implement proper mocking and stubbing
+- Set up continuous integration configuration
+
+## Deployment Configuration
+
+- Configure deployment-specific settings
+- Set up proper environment-specific builds
+- Configure containerization settings
+- Implement proper health checks
+- Configure scaling and load balancing
